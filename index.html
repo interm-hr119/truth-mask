@@ -41,10 +41,10 @@
 
         <div id="step-setup" class="screen active">
             <h1 style="text-align: center; margin-top: 40px;">TRUTH MASK</h1>
-            <p class="instruction">조직 내 숨어든 라이어를 찾아내세요.</p>
+            <p class="instruction">조직 내 라이어를 찾아내세요.<br>플레이어의 숫자를 선택하세요</p>
             <button class="btn" onclick="setupGame(4)">4명</button>
             <button class="btn" onclick="setupGame(5)">5명</button>
-            <button class="btn" style="grid-column: span 2;" onclick="setupGame(6)">6명 플레이 시작</button>
+            <button class="btn" style="grid-column: span 2;" onclick="setupGame(6)">6명</button>
         </div>
 
         <div id="step-check" class="screen">
@@ -156,7 +156,7 @@
         function showRole() {
             const p = players[currentPlayerIndex];
             document.getElementById('role-identity').innerText = p.isLiar ? "🤫 당신은 [라이어]" : "📢 당신은 [팀원]";
-            document.getElementById('role-mission').innerText = p.isLiar ? "정체를 숨기세요." : "라이어를 지목하세요.";
+            document.getElementById('role-mission').innerText = p.isLiar ? "당신은 중요한 영업보고서를 작성하지 않았습니다<br>정체를 숨기세요." : "우리팀의 영업실적을 위하여 라이어를 지목하세요.";
             document.getElementById('role-view').style.display = 'block';
             document.getElementById('view-btn').style.display = 'none';
             document.getElementById('next-btn').style.display = 'block';
